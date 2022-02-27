@@ -25,7 +25,7 @@ def clear(): return system('cls')
 logger.remove()
 logger.add(
     stderr, format="<white>{time:HH:mm:ss}</white> | <level>{level: <8}</level> | <cyan>{line}</cyan> - <white>{message}</white>")
-threads = int(sys.argv[1]) if len(sys.argv) > 1 else 250
+threads = int(sys.argv[1]) if len(sys.argv) > 1 else 500
 
 
 def checkReq():
